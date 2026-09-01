@@ -1,4 +1,5 @@
--- Problem 1: Table creation (DDL) + dummy data. Primary keys included as standard practice; 
+-- Problem 1: Table creation (DDL) + dummy data. Primary keys included as
+-- standard practice; foreign keys are the bonus (bottom of file).
 
 CREATE TABLE employees (
     id INTEGER PRIMARY KEY,
@@ -67,7 +68,7 @@ INSERT INTO sales (order_id, customer_id, product_id, quantity, sale_date) VALUE
     (3, 3, 3, 20, '2026-02-01'),
     (4, 1, 1, 5, '2026-02-15');
 
--- foreign key constraints 
+-- Bonus: foreign key constraints (run after all tables above exist)
 ALTER TABLE orders ADD CONSTRAINT fk_orders_customer
     FOREIGN KEY (customer_id) REFERENCES customers(customer_id);
 
